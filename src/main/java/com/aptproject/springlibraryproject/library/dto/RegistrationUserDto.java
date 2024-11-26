@@ -1,21 +1,14 @@
 package com.aptproject.springlibraryproject.library.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-import java.time.LocalDate;
 import java.util.List;
 
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-public class UserDTO
-        extends GenericDTO{
+@Data
+public class RegistrationUserDto {
     private String email;
     private String password;
+    private String confirmPassword;
     private String firstName;
     private String lastName;
     private String middleName;
