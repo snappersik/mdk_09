@@ -9,16 +9,12 @@ import lombok.*;
 @Table(name = "roles")
 @Getter
 @Setter
-
 public class Role {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    @Column(name = "id")
+    private Integer id;
 
-    @Column(name = "title")
-    private String title;
-
-    @Column(name = "description")
-    private String description;
+    @Column(name = "name")
+    private String name;
 }

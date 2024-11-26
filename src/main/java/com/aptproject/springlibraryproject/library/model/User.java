@@ -7,9 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity 
-@Table(name = "users",
-        uniqueConstraints = {@UniqueConstraint(name = "uniqueEmail", columnNames = "email"),
-                @UniqueConstraint(name = "uniqueLogin", columnNames = "login")})
+@Table(name = "users")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,17 +15,11 @@ import java.util.List;
 @SequenceGenerator(name = "default_generator", sequenceName = "users_seq", allocationSize = 1)
 public class User extends GenericModel{
 
-    @Column(name = "login", nullable = false)
-    private String login;
-
-    @Column(name = "password", nullable = false)
-    private String password;
-
     @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "birth_date", nullable = false)
-    private LocalDate birthDate;
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;

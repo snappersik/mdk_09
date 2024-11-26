@@ -1,11 +1,13 @@
 package com.aptproject.springlibraryproject.library.dto;
 
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public abstract class GenericDTO {
     private Long id;

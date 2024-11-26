@@ -1,10 +1,12 @@
 package com.aptproject.springlibraryproject.library.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 public class RegistrationUserDto {
     private String email;
     private String password;
